@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/ICoyoteRuntime/Assert/">
+    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/RuntimeException/RuntimeException/">
     <link rel="shortcut icon" href="/coyote/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Assert - Coyote</title>
+    <title>RuntimeException - Coyote</title>
     <link href="/coyote/css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="/coyote/css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="/coyote/css/base.css" rel="stylesheet">
@@ -35,20 +35,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "ICoyoteRuntime.Assert method (1 of 5)", url: "#_top", children: [
+          {title: "RuntimeException constructor", url: "#_top", children: [
               {title: "See Also", url: "#see-also" },
-          ]},
-          {title: "ICoyoteRuntime.Assert method (2 of 5)", url: "#icoyoteruntimeassert-method-2-of-5", children: [
-              {title: "See Also", url: "#see-also_1" },
-          ]},
-          {title: "ICoyoteRuntime.Assert method (3 of 5)", url: "#icoyoteruntimeassert-method-3-of-5", children: [
-              {title: "See Also", url: "#see-also_2" },
-          ]},
-          {title: "ICoyoteRuntime.Assert method (4 of 5)", url: "#icoyoteruntimeassert-method-4-of-5", children: [
-              {title: "See Also", url: "#see-also_3" },
-          ]},
-          {title: "ICoyoteRuntime.Assert method (5 of 5)", url: "#icoyoteruntimeassert-method-5-of-5", children: [
-              {title: "See Also", url: "#see-also_4" },
           ]},
         ];
 
@@ -86,20 +74,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../Stop/" class="btn btn-xs btn-default pull-right">
+      <a href="../../ICoyoteRuntime/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../Stop/" class="btn btn-xs btn-link">
-        Stop
+      <a href="../../ICoyoteRuntime/" class="btn btn-xs btn-link">
+        Overview
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../RandomInteger/" class="btn btn-xs btn-default pull-left">
+      <a href="../" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../RandomInteger/" class="btn btn-xs btn-link">
-        RandomInteger
+        Previous</a><a href="../" class="btn btn-xs btn-link">
+        Overview
       </a>
     </div>
     
@@ -107,171 +95,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
       
 
-      <h1 id="icoyoteruntimeassert-method-1-of-5">ICoyoteRuntime.Assert method (1 of 5)</h1>
-<p>Checks if the assertion holds, and if not, throws an <a href="../../AssertionFailureException/"><code>AssertionFailureException</code></a> exception.</p>
-<pre><code class="language-csharp">public void Assert(bool predicate)
+      <h1 id="runtimeexception-constructor">RuntimeException constructor</h1>
+<p>Initializes a new instance of the <a href="../"><code>RuntimeException</code></a> class.</p>
+<pre><code class="language-csharp">protected RuntimeException(SerializationInfo serializationInfo, StreamingContext streamingContext)
 </code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>predicate</td>
-<td>The predicate to check.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li>interface <a href="../">ICoyoteRuntime</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="icoyoteruntimeassert-method-2-of-5">ICoyoteRuntime.Assert method (2 of 5)</h1>
-<p>Checks if the assertion holds, and if not, throws an <a href="../../AssertionFailureException/"><code>AssertionFailureException</code></a> exception.</p>
-<pre><code class="language-csharp">public void Assert(bool predicate, string s, object arg0)
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>predicate</td>
-<td>The predicate to check.</td>
-</tr>
-<tr>
-<td>s</td>
-<td>The message to print if the assertion fails.</td>
-</tr>
-<tr>
-<td>arg0</td>
-<td>The first argument.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="see-also_1">See Also</h2>
-<ul>
-<li>interface <a href="../">ICoyoteRuntime</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="icoyoteruntimeassert-method-3-of-5">ICoyoteRuntime.Assert method (3 of 5)</h1>
-<p>Checks if the assertion holds, and if not, throws an <a href="../../AssertionFailureException/"><code>AssertionFailureException</code></a> exception.</p>
-<pre><code class="language-csharp">public void Assert(bool predicate, string s, params object[] args)
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>predicate</td>
-<td>The predicate to check.</td>
-</tr>
-<tr>
-<td>s</td>
-<td>The message to print if the assertion fails.</td>
-</tr>
-<tr>
-<td>args</td>
-<td>The message arguments.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="see-also_2">See Also</h2>
-<ul>
-<li>interface <a href="../">ICoyoteRuntime</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="icoyoteruntimeassert-method-4-of-5">ICoyoteRuntime.Assert method (4 of 5)</h1>
-<p>Checks if the assertion holds, and if not, throws an <a href="../../AssertionFailureException/"><code>AssertionFailureException</code></a> exception.</p>
-<pre><code class="language-csharp">public void Assert(bool predicate, string s, object arg0, object arg1)
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>predicate</td>
-<td>The predicate to check.</td>
-</tr>
-<tr>
-<td>s</td>
-<td>The message to print if the assertion fails.</td>
-</tr>
-<tr>
-<td>arg0</td>
-<td>The first argument.</td>
-</tr>
-<tr>
-<td>arg1</td>
-<td>The second argument.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="see-also_3">See Also</h2>
-<ul>
-<li>interface <a href="../">ICoyoteRuntime</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="icoyoteruntimeassert-method-5-of-5">ICoyoteRuntime.Assert method (5 of 5)</h1>
-<p>Checks if the assertion holds, and if not, throws an <a href="../../AssertionFailureException/"><code>AssertionFailureException</code></a> exception.</p>
-<pre><code class="language-csharp">public void Assert(bool predicate, string s, object arg0, object arg1, object arg2)
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>predicate</td>
-<td>The predicate to check.</td>
-</tr>
-<tr>
-<td>s</td>
-<td>The message to print if the assertion fails.</td>
-</tr>
-<tr>
-<td>arg0</td>
-<td>The first argument.</td>
-</tr>
-<tr>
-<td>arg1</td>
-<td>The second argument.</td>
-</tr>
-<tr>
-<td>arg2</td>
-<td>The third argument.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="see-also_4">See Also</h2>
-<ul>
-<li>interface <a href="../">ICoyoteRuntime</a></li>
+<li>class <a href="../">RuntimeException</a></li>
 <li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
 <li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
 </ul>
@@ -288,20 +118,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../Stop/" class="btn btn-xs btn-default pull-right">
+      <a href="../../ICoyoteRuntime/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../Stop/" class="btn btn-xs btn-link">
-        Stop
+      <a href="../../ICoyoteRuntime/" class="btn btn-xs btn-link">
+        Overview
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../RandomInteger/" class="btn btn-xs btn-default pull-left">
+      <a href="../" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../RandomInteger/" class="btn btn-xs btn-link">
-        RandomInteger
+        Previous</a><a href="../" class="btn btn-xs btn-link">
+        Overview
       </a>
     </div>
     

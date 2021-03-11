@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote/Configuration/IsXmlLogEnabled/">
+    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/RuntimeException/">
     <link rel="shortcut icon" href="/coyote/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>IsXmlLogEnabled - Coyote</title>
+    <title>Overview - Coyote</title>
     <link href="/coyote/css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="/coyote/css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="/coyote/css/base.css" rel="stylesheet">
     <link rel="stylesheet" href="/coyote/css/highlight.css">
-    <link href="../../../../css/main.css" rel="stylesheet">
-    <link href="../../../../css/player-controls.css" rel="stylesheet">
-    <link href="../../../../css/syntax.css" rel="stylesheet">
+    <link href="../../../css/main.css" rel="stylesheet">
+    <link href="../../../css/player-controls.css" rel="stylesheet">
+    <link href="../../../css/syntax.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -35,7 +35,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Configuration.IsXmlLogEnabled property", url: "#_top", children: [
+          {title: "RuntimeException class", url: "#_top", children: [
+              {title: "Protected Members", url: "#protected-members" },
               {title: "See Also", url: "#see-also" },
           ]},
         ];
@@ -44,13 +45,13 @@
     <script src="/coyote/js/base.js"></script>
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-89203408-1"></script>
       <script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
-      <script src="../../../../assets/js/analytics.js"></script>
-      <script src="../../../../assets/js/plugins.js"></script>
-      <script src="../../../../assets/js/animate_trace.js"></script>
-      <script src="../../../../assets/js/animation.js"></script>
-      <script src="../../../../assets/js/progress_bar.js"></script>
-      <script src="../../../../assets/js/trace_model.js"></script>
-      <script src="../../../../assets/js/main.js"></script> 
+      <script src="../../../assets/js/analytics.js"></script>
+      <script src="../../../assets/js/plugins.js"></script>
+      <script src="../../../assets/js/animate_trace.js"></script>
+      <script src="../../../assets/js/animation.js"></script>
+      <script src="../../../assets/js/progress_bar.js"></script>
+      <script src="../../../assets/js/trace_model.js"></script>
+      <script src="../../../assets/js/main.js"></script> 
 </head>
 
 <body>
@@ -74,20 +75,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../../Microsoft.Coyote.ActorsNamespace/" class="btn btn-xs btn-default pull-right">
+      <a href="RuntimeException/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../../Microsoft.Coyote.ActorsNamespace/" class="btn btn-xs btn-link">
-        Namespace Overview
+      <a href="RuntimeException/" class="btn btn-xs btn-link">
+        RuntimeException
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../IsDgmlGraphEnabled/" class="btn btn-xs btn-default pull-left">
+      <a href="../ExecutionCanceledException/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../IsDgmlGraphEnabled/" class="btn btn-xs btn-link">
-        IsDgmlGraphEnabled
+        Previous</a><a href="../ExecutionCanceledException/" class="btn btn-xs btn-link">
+        ExecutionCanceledException
       </a>
     </div>
     
@@ -95,15 +96,29 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
       
 
-      <h1 id="configurationisxmllogenabled-property">Configuration.IsXmlLogEnabled property</h1>
-<p>Produce an XML formatted runtime log file.</p>
-<pre><code class="language-csharp">public bool IsXmlLogEnabled { get; }
+      <h1 id="runtimeexception-class">RuntimeException class</h1>
+<p>An exception that is thrown by the Coyote runtime.</p>
+<pre><code class="language-csharp">public class RuntimeException : Exception
 </code></pre>
+<h2 id="protected-members">Protected Members</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="RuntimeException/">RuntimeException</a>(…)</td>
+<td>Initializes a new instance of the <a href="./"><code>RuntimeException</code></a> class.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li>class <a href="../">Configuration</a></li>
-<li>namespace <a href="../">Microsoft.Coyote</a></li>
-<li>assembly <a href="../../">Microsoft.Coyote</a></li>
+<li>namespace <a href="../../Microsoft.Coyote.RuntimeNamespace/">Microsoft.Coyote.Runtime</a></li>
+<li>assembly <a href="../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
 </ul>
 <!-- DO NOT EDIT: generated by xmldocmd for Microsoft.Coyote.dll -->
 
@@ -118,20 +133,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../../Microsoft.Coyote.ActorsNamespace/" class="btn btn-xs btn-default pull-right">
+      <a href="RuntimeException/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../../Microsoft.Coyote.ActorsNamespace/" class="btn btn-xs btn-link">
-        Namespace Overview
+      <a href="RuntimeException/" class="btn btn-xs btn-link">
+        RuntimeException
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../IsDgmlGraphEnabled/" class="btn btn-xs btn-default pull-left">
+      <a href="../ExecutionCanceledException/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../IsDgmlGraphEnabled/" class="btn btn-xs btn-link">
-        IsDgmlGraphEnabled
+        Previous</a><a href="../ExecutionCanceledException/" class="btn btn-xs btn-link">
+        ExecutionCanceledException
       </a>
     </div>
     
