@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/RuntimeFactory/Create/">
+    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/SchedulingPoint/">
     <link rel="shortcut icon" href="/coyote/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Create - Coyote</title>
+    <title>Overview - Coyote</title>
     <link href="/coyote/css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="/coyote/css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="/coyote/css/base.css" rel="stylesheet">
     <link rel="stylesheet" href="/coyote/css/highlight.css">
-    <link href="../../../../css/main.css" rel="stylesheet">
-    <link href="../../../../css/player-controls.css" rel="stylesheet">
-    <link href="../../../../css/syntax.css" rel="stylesheet">
+    <link href="../../../css/main.css" rel="stylesheet">
+    <link href="../../../css/player-controls.css" rel="stylesheet">
+    <link href="../../../css/syntax.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -35,27 +35,22 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "RuntimeFactory.Create method (1 of 2)", url: "#_top", children: [
-              {title: "Return Value", url: "#return-value" },
+          {title: "SchedulingPoint class", url: "#_top", children: [
+              {title: "Public Members", url: "#public-members" },
               {title: "Remarks", url: "#remarks" },
               {title: "See Also", url: "#see-also" },
-          ]},
-          {title: "RuntimeFactory.Create method (2 of 2)", url: "#runtimefactorycreate-method-2-of-2", children: [
-              {title: "Return Value", url: "#return-value_1" },
-              {title: "Remarks", url: "#remarks_1" },
-              {title: "See Also", url: "#see-also_1" },
           ]},
         ];
 
     </script>
     <script src="/coyote/js/base.js"></script>
-      <script src="../../../../assets/js/analytics.js"></script>
-      <script src="../../../../assets/js/plugins.js"></script>
-      <script src="../../../../assets/js/animate_trace.js"></script>
-      <script src="../../../../assets/js/animation.js"></script>
-      <script src="../../../../assets/js/progress_bar.js"></script>
-      <script src="../../../../assets/js/trace_model.js"></script>
-      <script src="../../../../assets/js/main.js"></script> 
+      <script src="../../../assets/js/analytics.js"></script>
+      <script src="../../../assets/js/plugins.js"></script>
+      <script src="../../../assets/js/animate_trace.js"></script>
+      <script src="../../../assets/js/animation.js"></script>
+      <script src="../../../assets/js/progress_bar.js"></script>
+      <script src="../../../assets/js/trace_model.js"></script>
+      <script src="../../../assets/js/main.js"></script> 
 </head>
 
 <body>
@@ -79,20 +74,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-default pull-right">
+      <a href="Interleave/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-link">
-        Overview
+      <a href="Interleave/" class="btn btn-xs btn-link">
+        Interleave
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../" class="btn btn-xs btn-default pull-left">
+      <a href="../RuntimeFactory/Create/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../" class="btn btn-xs btn-link">
-        Overview
+        Previous</a><a href="../RuntimeFactory/Create/" class="btn btn-xs btn-link">
+        Create
       </a>
     </div>
     
@@ -100,51 +95,35 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
       
 
-      <h1 id="runtimefactorycreate-method-1-of-2">RuntimeFactory.Create method (1 of 2)</h1>
-<p>Creates a new Coyote runtime.</p>
-<pre><code class="language-csharp">public static ICoyoteRuntime Create()
+      <h1 id="schedulingpoint-class">SchedulingPoint class</h1>
+<p>Provides a set of static methods for declaring points in the execution where interleavings between operations should be explored during testing.</p>
+<pre><code class="language-csharp">public static class SchedulingPoint
 </code></pre>
-<h2 id="return-value">Return Value</h2>
-<p>The created task runtime.</p>
-<h2 id="remarks">Remarks</h2>
-<p>Only one task runtime can be created per process. If you create a new task runtime it replaces the previously installed one.</p>
-<h2 id="see-also">See Also</h2>
-<ul>
-<li>interface <a href="../../ICoyoteRuntime/">ICoyoteRuntime</a></li>
-<li>class <a href="../">RuntimeFactory</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="runtimefactorycreate-method-2-of-2">RuntimeFactory.Create method (2 of 2)</h1>
-<p>Creates a new Coyote runtime with the specified <a href="../../../Microsoft.Coyote/Configuration/"><code>Configuration</code></a>.</p>
-<pre><code class="language-csharp">public static ICoyoteRuntime Create(Configuration configuration)
-</code></pre>
+<h2 id="public-members">Public Members</h2>
 <table>
 <thead>
 <tr>
-<th>parameter</th>
+<th>name</th>
 <th>description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>configuration</td>
-<td>The runtime configuration to use.</td>
+<td>static <a href="Deprioritize/">Deprioritize</a>()</td>
+<td>Lowers the scheduling priority of the currently executing operation during testing.</td>
+</tr>
+<tr>
+<td>static <a href="Interleave/">Interleave</a>()</td>
+<td>Explores a possible interleaving with another operation during testing.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="return-value_1">Return Value</h2>
-<p>The created task runtime.</p>
-<h2 id="remarks_1">Remarks</h2>
-<p>Only one task runtime can be created per process. If you create a new task runtime it replaces the previously installed one.</p>
-<h2 id="see-also_1">See Also</h2>
+<h2 id="remarks">Remarks</h2>
+<p>These methods are no-op in production.</p>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li>interface <a href="../../ICoyoteRuntime/">ICoyoteRuntime</a></li>
-<li>class <a href="../../../Microsoft.Coyote/Configuration/">Configuration</a></li>
-<li>class <a href="../">RuntimeFactory</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
+<li>namespace <a href="../../Microsoft.Coyote.RuntimeNamespace/">Microsoft.Coyote.Runtime</a></li>
+<li>assembly <a href="../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
 </ul>
 <!-- DO NOT EDIT: generated by xmldocmd for Microsoft.Coyote.dll -->
 
@@ -159,20 +138,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-default pull-right">
+      <a href="Interleave/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-link">
-        Overview
+      <a href="Interleave/" class="btn btn-xs btn-link">
+        Interleave
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../" class="btn btn-xs btn-default pull-left">
+      <a href="../RuntimeFactory/Create/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../" class="btn btn-xs btn-link">
-        Overview
+        Previous</a><a href="../RuntimeFactory/Create/" class="btn btn-xs btn-link">
+        Create
       </a>
     </div>
     

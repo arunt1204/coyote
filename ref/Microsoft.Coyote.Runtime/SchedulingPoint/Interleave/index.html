@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/RuntimeFactory/Create/">
+    <link rel="canonical" href="https://microsoft.github.io/coyote/ref/Microsoft.Coyote.Runtime/SchedulingPoint/Interleave/">
     <link rel="shortcut icon" href="/coyote/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Create - Coyote</title>
+    <title>Interleave - Coyote</title>
     <link href="/coyote/css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="/coyote/css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="/coyote/css/base.css" rel="stylesheet">
@@ -35,15 +35,8 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "RuntimeFactory.Create method (1 of 2)", url: "#_top", children: [
-              {title: "Return Value", url: "#return-value" },
-              {title: "Remarks", url: "#remarks" },
+          {title: "SchedulingPoint.Interleave method", url: "#_top", children: [
               {title: "See Also", url: "#see-also" },
-          ]},
-          {title: "RuntimeFactory.Create method (2 of 2)", url: "#runtimefactorycreate-method-2-of-2", children: [
-              {title: "Return Value", url: "#return-value_1" },
-              {title: "Remarks", url: "#remarks_1" },
-              {title: "See Also", url: "#see-also_1" },
           ]},
         ];
 
@@ -79,12 +72,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-default pull-right">
+      <a href="../Deprioritize/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-link">
-        Overview
+      <a href="../Deprioritize/" class="btn btn-xs btn-link">
+        Deprioritize
       </a>
     </div>
     
@@ -100,49 +93,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
       
 
-      <h1 id="runtimefactorycreate-method-1-of-2">RuntimeFactory.Create method (1 of 2)</h1>
-<p>Creates a new Coyote runtime.</p>
-<pre><code class="language-csharp">public static ICoyoteRuntime Create()
+      <h1 id="schedulingpointinterleave-method">SchedulingPoint.Interleave method</h1>
+<p>Explores a possible interleaving with another operation during testing.</p>
+<pre><code class="language-csharp">public static void Interleave()
 </code></pre>
-<h2 id="return-value">Return Value</h2>
-<p>The created task runtime.</p>
-<h2 id="remarks">Remarks</h2>
-<p>Only one task runtime can be created per process. If you create a new task runtime it replaces the previously installed one.</p>
 <h2 id="see-also">See Also</h2>
 <ul>
-<li>interface <a href="../../ICoyoteRuntime/">ICoyoteRuntime</a></li>
-<li>class <a href="../">RuntimeFactory</a></li>
-<li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
-<li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
-</ul>
-<hr />
-<h1 id="runtimefactorycreate-method-2-of-2">RuntimeFactory.Create method (2 of 2)</h1>
-<p>Creates a new Coyote runtime with the specified <a href="../../../Microsoft.Coyote/Configuration/"><code>Configuration</code></a>.</p>
-<pre><code class="language-csharp">public static ICoyoteRuntime Create(Configuration configuration)
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>configuration</td>
-<td>The runtime configuration to use.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="return-value_1">Return Value</h2>
-<p>The created task runtime.</p>
-<h2 id="remarks_1">Remarks</h2>
-<p>Only one task runtime can be created per process. If you create a new task runtime it replaces the previously installed one.</p>
-<h2 id="see-also_1">See Also</h2>
-<ul>
-<li>interface <a href="../../ICoyoteRuntime/">ICoyoteRuntime</a></li>
-<li>class <a href="../../../Microsoft.Coyote/Configuration/">Configuration</a></li>
-<li>class <a href="../">RuntimeFactory</a></li>
+<li>class <a href="../">SchedulingPoint</a></li>
 <li>namespace <a href="../">Microsoft.Coyote.Runtime</a></li>
 <li>assembly <a href="../../../Microsoft.Coyote/">Microsoft.Coyote</a></li>
 </ul>
@@ -159,12 +116,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-default pull-right">
+      <a href="../Deprioritize/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../SchedulingPoint/" class="btn btn-xs btn-link">
-        Overview
+      <a href="../Deprioritize/" class="btn btn-xs btn-link">
+        Deprioritize
       </a>
     </div>
     
