@@ -221,8 +221,10 @@ the <code>Init</code> state. The <code>Active</code> state can pop itself off th
 using a <code>RaisePopStateEvent</code> call:</p>
 <pre><code class="language-csharp">void HandlePing()
 {
-    Console.WriteLine(&quot;Server received ping event while in the {0} state&quot;, this.CurrentState.Name);
-    this.RaisePopStateEvent();  // pop the current state off the stack of active states.
+    Console.WriteLine(&quot;Server received ping event while in the {0} state&quot;, 
+        this.CurrentState.Name);
+    // pop the current state off the stack of active states.
+    this.RaisePopStateEvent();  
 }
 </code></pre>
 <p>Note that this does not result in the <code>OnEntry</code> method being called again, because you never

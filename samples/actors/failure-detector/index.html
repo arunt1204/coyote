@@ -142,7 +142,9 @@ When you use the right scheduling strategy, you will see a bug report:</p>
 information needed to reproduce the bug.</p>
 <p>Finding a hard to find bug is one thing, but if you can&rsquo;t reproduce this bug while debugging there
 is no point. So the <code>*.schedule</code> can be used with the <code>coyote replay</code> command as follows:</p>
-<pre><code class="language-plain">coyote replay ./bin/net5.0/Monitors.dll .\bin\net48\Output\Monitors.exe\CoyoteOutput\Monitors_0_0.schedule
+<pre><code class="language-plain">coyote replay ./bin/net5.0/Monitors.dll 
+    .\bin\net48\Output\Monitors.exe\CoyoteOutput\Monitors_0_0.schedule
+
 . Reproducing trace in coyote-samples\./bin/net48/Monitors.exe
 ... Reproduced 1 bug.
 ... Elapsed 0.1724228 sec.

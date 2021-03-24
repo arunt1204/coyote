@@ -324,7 +324,7 @@ public static async Task TestConcurrentAccountCreation()
 <p>Try run this concurrent test. The assertion will <em>most likely</em> fail. The reason it is not a
 guaranteed failure is that there are some task interleavings where it passes, and others where it
 fails with the following exception:</p>
-<pre><code class="language-plain">Unhandled exception. RowAlreadyExistsException: Exception of type 'RowAlreadyExistsException' was thrown.
+<pre><code class="language-plain">RowAlreadyExistsException: Exception of type 'RowAlreadyExistsException' was thrown.
 ...
 </code></pre>
 <p>Let&rsquo;s dig into why the concurrent test failed.</p>
@@ -417,7 +417,8 @@ read more about other Coyote tool options <a href="../../get-started/using-coyot
 </code></pre>
 <p>Cool, the flakey test is no longer flakey! Coyote can also help you reproduce and debug it. You can
 simply run <code>coyote replay</code> giving the <code>.schedule</code> file that Coyote outputs upon finding a bug:</p>
-<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule -m TestConcurrentAccountCreation
+<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule 
+    -m TestConcurrentAccountCreation
 . Replaying .\Output\AccountManager.dll\CoyoteOutput\AccountManager_0_1.schedule
 ... Task 0 is using 'replay' strategy.
 ... Reproduced 1 bug (use --break to attach the debugger).
@@ -460,7 +461,8 @@ Options:
 coyote test .\AccountManager.dll -m TestConcurrentAccountCreation -i 100
 </code></pre>
 <p>If you find a bug you can replay with the following command:</p>
-<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule -m TestConcurrentAccountCreation
+<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule 
+    -m TestConcurrentAccountCreation
 </code></pre>
 <p>Enjoy!</p>
 

@@ -161,7 +161,8 @@ properly. This can be done by providing the same strong name key that you provid
 original build. This can be done using the <code>--strong-name-key-file</code> command line argument (or
 <code>-snk</code> for the abbreviated option name).</p>
 <p>For example, from your <code>coyote</code> repo:</p>
-<pre><code class="language-plain">bin\net48\coyote rewrite d:\git\foundry99\Coyote\Tests\Tests.SystematicTesting\bin\net48\rewrite.coyote.json --strong-name-key-file Common\Key.snk
+<pre><code class="language-plain">coyote rewrite d:\git\Coyote\Tests\Tests.SystematicTesting\bin\net48\rewrite.coyote.json
+    --strong-name-key-file Common\Key.snk
 </code></pre>
 <p>You can also provide this key in the JSON file using the <code>StrongNameKeyFile</code> property.</p>
 <h3 id="test-your-binaries">Test your binaries</h3>

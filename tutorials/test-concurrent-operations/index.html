@@ -347,7 +347,8 @@ coyote test .\AccountManager.dll -m TestConcurrentAccountDeletion -i 100
 </code></pre>
 <p>If you find a bug you can replay with the following command (providing the correct .schedule file
 reported from the previous coyote test that failed):</p>
-<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule -m TestConcurrentAccountDeletion
+<pre><code class="language-plain">coyote replay .\AccountManager.dll -schedule AccountManager_0_0.schedule 
+    -m TestConcurrentAccountDeletion
 </code></pre>
 <p>Feel free to play around with the code and write more concurrency unit tests with Coyote!</p>
 

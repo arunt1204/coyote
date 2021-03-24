@@ -344,8 +344,8 @@ Starting TestingProcessScheduler in process 26236
 ..... Iteration #30
 ... Task 0 found a bug.
 ... Emitting task 0 traces:
-..... Writing .\bin\net5.0\Output\DrinksServingRobotActors.exe\CoyoteOutput\DrinksServingRobotActors_0_0.txt
-..... Writing .\bin\net5.0\Output\DrinksServingRobotActors.exe\CoyoteOutput\DrinksServingRobotActors_0_0.schedule
+..... Writing CoyoteOutput\DrinksServingRobotActors_0_0.txt
+..... Writing CoyoteOutput\DrinksServingRobotActors_0_0.schedule
 ... Elapsed 0.5330326 sec.
 ... Testing statistics:
 ..... Found 1 bug.
@@ -359,7 +359,8 @@ Starting TestingProcessScheduler in process 26236
 <code>.bin\net5.0\Output\DrinksServingRobot.exe\CoyoteOutput\DrinksServingRobot_0_1.txt</code>. This log can be
 pretty big, it contains the test iteration that failed, and towards the end of this file you will
 see something like this:</p>
-<pre><code class="language-xml">&lt;ErrorLog&gt; Microsoft.Coyote.Samples.DrinksServingRobot.LivenessMonitor detected liveness bug in hot state 'Busy' at the end of program execution.
+<pre><code class="language-xml">&lt;ErrorLog&gt; Microsoft.Coyote.Samples.DrinksServingRobot.LivenessMonitor detected liveness bug 
+           in hot state 'Busy' at the end of program execution.
 &lt;StrategyLog&gt; Found bug using 'PCT' strategy.
 &lt;StrategyLog&gt; Testing statistics:
 &lt;StrategyLog&gt; Found 1 bug.
@@ -393,7 +394,8 @@ of a <code>[Test]</code> method that takes an <code>IActorRuntime</code>:</p>
     public static void Execute(IActorRuntime runtime)
     {
         runtime.RegisterMonitor&lt;LivenessMonitor&gt;();
-        ActorId driver = runtime.CreateActor(typeof(FailoverDriver), new FailoverDriver.ConfigEvent(RunForever));
+        ActorId driver = runtime.CreateActor(typeof(FailoverDriver), 
+            new FailoverDriver.ConfigEvent(RunForever));
     }
 }
 </code></pre>
@@ -521,13 +523,14 @@ long it raises an exception and the test fails.  This is in fact the failure tha
 the test.</p>
 <h3 id="explanation-of-the-bug">Explanation of the bug</h3>
 <p>Remember the last lines of the coyote test execution log file:</p>
-<pre><code class="language-shell">&lt;ErrorLog&gt; Monitor 'Microsoft.Coyote.Samples.DrinksServingRobot.LivenessMonitor' detected liveness bug in hot state 'Busy' at the end of program execution.
+<pre><code class="language-shell">&lt;ErrorLog&gt; Monitor 'Microsoft.Coyote.Samples.DrinksServingRobot.LivenessMonitor' detected 
+liveness bug in hot state 'Busy' at the end of program execution.
 </code></pre>
 <p>If you add to the coyote test command line <code>--graph-bug</code>, and test again:</p>
 <pre><code class="language-plain">coyote test .\bin\net5.0\DrinksServingRobotActors.dll -i 1000 -ms 2000 --sch-pct 10 --graph-bug
 </code></pre>
 <p>you&rsquo;ll see in the output of the tester that a DGML diagram has been produced:</p>
-<pre><code class="language-plain">..... Writing .\bin\net5.0\Output\DrinksServingRobotActors.exe\CoyoteOutput\DrinksServingRobotActors_0_0.dgml
+<pre><code class="language-plain">..... Writing CoyoteOutput\DrinksServingRobotActors_0_0.dgml
 </code></pre>
 <p>Open this with Visual Studio 2019 and you will see a diagram like this.  Here the diagram is also
 animated using the contents of the <code>--xml-trace</code> output so you can see the sequence of events
@@ -605,14 +608,16 @@ private void NextMove()
         this.WriteLine(&quot;&lt;Robot&gt; Reached Client.&quot;);
         Specification.Assert(
             this.Coordinates == this.CurrentOrder.ClientDetails.Coordinates,
-            &quot;Having reached the Client the Robot's coordinates must be the same as the Client's, but they aren't&quot;);
+            &quot;Having reached the Client the Robot's coordinates must be the same &quot; +
+            &quot;as the Client's, but they aren't&quot;);
     }
     else
     {
         var nextDestination = this.Route[0];
         this.Route.RemoveAt(0);
         this.MoveTo(nextDestination);
-        this.Timers[&quot;MoveTimer&quot;] = this.StartTimer(TimeSpan.FromSeconds(MoveDuration), new MoveTimerElapsedEvent());
+        this.Timers[&quot;MoveTimer&quot;] = this.StartTimer(TimeSpan.FromSeconds(MoveDuration), 
+            new MoveTimerElapsedEvent());
     }
 }
 </code></pre>
@@ -681,7 +686,8 @@ So this is where the Robot should be clearing its internal <code>DrinkOrderPendi
     {
         this.Route = route;
         // this.DrinkOrderPending = false; // this is where it really belongs.
-        this.Timers[&quot;MoveTimer&quot;] = this.StartTimer(TimeSpan.FromSeconds(MoveDuration), new MoveTimerElapsedEvent());
+        this.Timers[&quot;MoveTimer&quot;] = this.StartTimer(TimeSpan.FromSeconds(MoveDuration), 
+            new MoveTimerElapsedEvent());
     }
 
     this.RaiseGotoStateEvent&lt;MovingOnRoute&gt;();

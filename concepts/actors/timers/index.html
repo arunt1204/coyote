@@ -156,7 +156,8 @@ internal class Client : Actor
     this.WriteMessage(&quot;&lt;Client&gt; Handling timeout from timer&quot;);
 
     this.WriteMessage(&quot;&lt;Client&gt; Starting a period timer&quot;);
-    this.PeriodicTimer = this.StartPeriodicTimer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), new CustomTimerEvent());
+    this.PeriodicTimer = this.StartPeriodicTimer(TimeSpan.FromSeconds(1), 
+        TimeSpan.FromSeconds(1), new CustomTimerEvent());
 }
 </code></pre>
 <p>In this case we use a <code>CustomTimerEvent</code> instead of the default <code>TimerElapsedEvent</code>, this custom event is defined as follows:</p>
